@@ -1,0 +1,10 @@
+h2{
+    font-size:30px;
+    color:blueviolet;
+}
+c-css-child-demo{
+    font-size: 20px;
+    display: block;
+    background-color: rgb(13, 74, 2);
+    color: rgb(216, 198, 198);
+}

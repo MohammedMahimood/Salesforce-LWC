@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-29-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="getRecord Adapter">
+        <div class="slds-p-around_medium">
+            <!-- Wrapped in a guard to prevent showing empty labels during load -->
+            <template if:true={name}>
+                <div>Name - {name}</div>
+                <div>Owner - {owner}</div>
+                <div>Annual Revenue - {annualRevenue}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

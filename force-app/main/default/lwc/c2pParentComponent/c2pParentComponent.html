@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-22-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Child to parent communication">
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="Show Button" onclick={handlerCheck}></lightning-button>
+            <h2 style="color: red;">{msg}</h2>
+            <template if:true={isShow}>
+            <c-c2p-modal-component
+            onclose={closeButton}></c-c2p-modal-component>
+            </template>
+        </div>
+    </lightning-card>
+</template>

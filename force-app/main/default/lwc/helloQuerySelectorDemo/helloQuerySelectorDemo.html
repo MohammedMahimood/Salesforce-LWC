@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-20-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Query Selector">
+        <div class="slds-m-around_medium">
+            <h1>I am the Heading of h1</h1>
+            <template for:each={userNames} for:item="user">
+                <div class="name" key={user}>{user}</div>
+              
+            </template>
+              <div class="child" lwc:dom="manual"></div>
+            <button onclick={fetchDetailHandler}> fetch Detail</button>
+        </div>
+    </lightning-card>
+    
+</template>

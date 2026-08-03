@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-29-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="getPicklistValuesByrecordType Adapter">
+        <div class="slds-m-around_medium">
+            <template if:true={ratingOption}>
+            <lightning-combobox name="rating" label="Rating" value="selectedRating" placeholder="select Rating" options={ratingOption}
+                onchange={handleChange}></lightning-combobox>
+                <p>selectedRating:{selectedRating}</p>
+                </template>
+                <template if:true={industryOption}>
+            <lightning-combobox name="industry" label="Industry" value="selectedIndustry" placeholder="select Industry" options={industryOption}
+                onchange={handleChange}></lightning-combobox>
+                <p>selectedIndustry:{selectedIndustry}</p>
+                </template>
+        </div>
+    </lightning-card>
+</template>

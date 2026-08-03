@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-30-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+     <lightning-card title="Delete Record adapter">
+        <div class="slds-m-around_medium">
+            <!-- <lightning-datatable key-field="Id" data={contacts}  draft-values={draftValues} onsave={handleSave} hide-checkbox-column columns={columns}>
+
+            </lightning-datatable> -->
+            <form>
+                <lightning-input label="Record Id" name="recordId"
+                class="slds-m-botton_x-small" onchange={changeHandler}></lightning-input>
+            <lightning-button label="Delete record" variant="brand" onclick={deleteHandler}></lightning-button>
+            </form>
+        </div>
+    </lightning-card>
+</template>

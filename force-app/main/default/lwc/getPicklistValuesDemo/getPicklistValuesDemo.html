@@ -1,0 +1,36 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-29-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="getPicklistValues Adapter">
+        <div class="slds-p-around_medium">
+            <lightning-combobox 
+            name="Industry" 
+            label="Status" 
+            value={selectedIndustry} 
+            placeholder="Select Industry"
+            options={industryOptions} 
+            onchange={handleChange}>
+            </lightning-combobox>
+        </div>
+        <p>selectedIndustry:{selectedIndustry}</p>
+    </lightning-card>
+
+      <lightning-card title="getPicklistValues Adapter with type">
+        <div class="slds-p-around_medium">
+            <lightning-combobox 
+            name="Type" 
+            label="Type" 
+            value={selectedType} 
+            placeholder="Select type"
+            options={typeOptions} 
+            onchange={handleTypeChange}>
+            </lightning-combobox>
+        </div>
+        <p>selectedIndustry:{selectedIndustry}</p>
+    </lightning-card>
+</template>

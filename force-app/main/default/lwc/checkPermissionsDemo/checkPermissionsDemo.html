@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-24-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Check Permissions Demo">
+        <template if:true={hasViewAllDataAvailable}>
+            <p style="color:green; font-size:20px"> <strong>You have a permissions! Enjoy</strong></p>
+        </template>
+        <template if:false={hasViewAllDataAvailable}>
+            <p style="color:red; font-size:20px"><strong>We are regret to Inform that You dont have Access! </strong></p>
+        </template>
+    
+      <template if:true={CustomPetmission}>
+            <p style="color:green; font-size:20px"> <strong>You have a permissions! Enjoy</strong></p>
+        </template>
+        <template if:false={CustomPetmission}>
+            <p style="color:red; font-size:20px"><strong>We are regret to Inform that You dont have Access! </strong></p>
+        </template>
+    </lightning-card>
+</template>

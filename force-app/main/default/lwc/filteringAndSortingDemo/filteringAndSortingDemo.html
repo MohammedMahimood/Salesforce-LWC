@@ -1,0 +1,70 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-01-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Client Side Filtering Demo">
+        <div class="slds-p-around_medium">
+
+            <lightning-layout multiple-rows="false">
+
+                <lightning-layout-item size="3" padding="around-small">
+                    <lightning-combobox
+                        name="filterBy"
+                        label="Filter By"
+                        value={filterBy}
+                        options={FilterByOptions}
+                        onchange={filterByHandler}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="3" padding="around-small">
+                    <lightning-input
+                        type="text"
+                        label="Search"
+                        placeholder="Enter search text..."
+                        onkeyup={filterHandler}>
+                    </lightning-input>
+                </lightning-layout-item>
+
+                 <lightning-layout-item size="3" alignment-bump="left" padding="around-small">
+                    <lightning-combobox
+                        name="sortedBy"
+                        label="Sort By"
+                        value={sortedBy}
+                        options={SortedByOptions}
+                        onchange={sortedByHandler}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+
+            </lightning-layout>
+
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr>
+                        <template for:each={headings} for:item="heading">
+                            <th key={heading}>
+                                <div class="slds-truncate">{heading}</div>
+                            </th>
+                        </template>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <template for:each={filteredData} for:item="data">
+                        <tr key={data.Id}>
+                            <td>{data.Id}</td>
+                            <td>{data.Name}</td>
+                            <td>{data.Title}</td>
+                            <td>{data.Email}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+
+        </div>
+    </lightning-card>
+</template>

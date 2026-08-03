@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-31-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<apex:page controller="pdfPageController" renderAs="pdf" applyHtmlTag="false" showHeader="false" cache="true" readOnly="true">
+    <html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    </head>
+
+    <body>
+        <apex:outputText value="{!pdfText}" escape="false"></apex:outputText>
+    </body>
+
+    </html>
+</apex:page>

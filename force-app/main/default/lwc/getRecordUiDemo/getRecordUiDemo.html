@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-30-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="getRecordUi Adapter">
+        <div class="slds-p-around_medium">
+            <template for:each={formFields} for:item="field">
+                <div key={field.label}>
+                    <p><strong>{field.label}</strong></p>
+                    <p>{field.value}</p>
+                </div>
+            </template>
+        </div>
+     </lightning-card>
+</template>

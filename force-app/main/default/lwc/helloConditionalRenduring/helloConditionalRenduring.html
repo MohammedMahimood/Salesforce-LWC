@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-19-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Conditional check">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Show Data" title="Primary Action" variant="brand"
+                onclick={toggleVisibility}></lightning-button>
+            <template if:true={isVisible}>
+                <p>Welcome to LWC</p>
+            </template>
+            <!-- <template if:false={isVisible}>
+                <p>Goodbye from LWC</p>
+            </template> -->
+        </div>
+    </lightning-card>
+</template>

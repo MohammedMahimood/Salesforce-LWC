@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-29-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="getObjectInfo Adapter">
+        <div class="slds-p-around_medium">
+            {defaultRecordTypeId}
+        </div>
+    </lightning-card>
+
+    <lightning-card title="getObjectInfoS Adapter">
+        <div class="slds-p-around_medium">
+            <template if:true={objectInfos}>
+
+
+                <template for:each={objectInfos.results} for:item="obj">
+                    <div key={obj.result.apiName}>
+                        <div>Object Api Name- {obj.result.apiName}</div>
+                        <div>defaultRecordTypeId- {obj.result.defaultRecordTypeId}</div>
+
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

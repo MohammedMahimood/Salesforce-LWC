@@ -1,0 +1,16 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-30-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Update Record adapter">
+        <div class="slds-m-around_medium">
+            <lightning-datatable key-field="Id" data={contacts}  draft-values={draftValues} onsave={handleSave} hide-checkbox-column columns={columns}>
+
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

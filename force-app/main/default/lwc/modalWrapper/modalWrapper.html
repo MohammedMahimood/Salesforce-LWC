@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-01-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Modal Wrapper">
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="Open Modal" onclick={openModalHandler}></lightning-button>
+        </div>
+
+    </lightning-card>
+    <template if:true={isOpen}>
+        <c-modal onclose={closeModal}>
+            <div slot="title">Modal Title</div>
+            <h1 slot="content">
+                <p>
+                    Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat
+                    veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+                    officia tempor esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna exercitation
+                    reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
+                </p>
+            </h1>
+            <div slot="footer">
+                <lightning-button variant="neutral" label="Cancel" onclick={closeModal}></lightning-button>
+                <lightning-button variant="brand" label="Save" onclick={closeModal}></lightning-button>
+            </div>
+        </c-modal>
+    </template>
+</template>

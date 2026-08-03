@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-01-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="CSV Demo">
+        <div class="slds-m-around_medium">
+            <template if:true={accountData}>
+                <template for:each={accountData} for:item="account">
+                    <p key={account.Id}>{account.Name} {account.Phone} {account.AnnualRevenue}</p>
+                    
+                </template>
+            </template>
+            <lightning-button label="Generate CSV" onclick={csvGenerator} variant="brand"></lightning-button>
+            </div>
+    </lightning-card>
+</template>

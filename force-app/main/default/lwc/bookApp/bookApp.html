@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-31-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Book Finder App">
+        <div class="slds-p-around_medium">
+            <lightning-layout multiple-rows="true">
+                <!-- Ensure data array collection items exist safely before parsing structural HTML tags -->
+                <template if:true={books}>
+                    <template for:each={books.items} for:item="book">
+                        <!-- FIXED: Corrected padding spelling to single 'r' and key to lowercase id -->
+                        <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="3" padding="around-small" key={book.id}>
+                            <!-- FIXED: Corrected class spelling to slds-p-around_medium -->
+                            <div class="slds-box slds-p-around_medium slds-text-align_center height-utility-card">
+                                <img src={book.volumeInfo.imageLinks.smallThumbnail} alt={book.volumeInfo.title} style="height: 150px; object-fit: contain;" class="slds-m-bottom_small"/>
+                                
+                                <div class="slds-text-heading_small slds-truncate" title={book.volumeInfo.title}>
+                                    <strong>{book.volumeInfo.title}</strong>
+                                </div>
+                                <div class="slds-m-top_x-small"><strong>Published:</strong> {book.volumeInfo.publishedDate}</div>
+                                <div><strong>Rating:</strong> {book.volumeInfo.averageRating}</div>
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+                </template>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-22-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <template for:each={user} for:item="item">
+        <div key={item.name}>
+            <p><strong>Name:</strong> {item.name}
+            </p>
+
+            <p>
+                <strong>Age:</strong> {item.age}
+            </p>
+
+            <p>
+                <strong>Location:</strong> {item.location}
+            </p>
+
+            <hr>
+        </div>
+    </template>
+</template>

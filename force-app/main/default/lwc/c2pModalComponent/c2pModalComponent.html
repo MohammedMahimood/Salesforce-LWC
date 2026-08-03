@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-22-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+
+            <div class="slds-modal__header">
+                <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate" tabindex="-1">
+                    Confirmation
+                </h1>
+            </div>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <p>Successfully Created!</p>
+
+            </div>
+            <div class="slds-modal__footer">
+               
+                <button class="slds-button slds-button_brand" onclick={closeHandler}>
+                    Ok
+                </button>
+            </div>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</template>

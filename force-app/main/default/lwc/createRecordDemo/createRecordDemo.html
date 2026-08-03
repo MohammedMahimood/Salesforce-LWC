@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-30-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <!-- FIXED: Updated label to match Contact creation context -->
+    <lightning-card title="Create Contact Wire Adapter">
+        <div class="slds-p-around_medium">
+            <!-- Used class for clean DOM tracking inside JS -->
+            <form class="createForm">
+                <lightning-input label="First Name" name="FirstName" onchange={changeHandler}
+                    class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input label="Last Name" name="LastName" onchange={changeHandler}
+                    class="slds-m-bottom_x-small" required></lightning-input>
+                <lightning-input label="Title" name="Title" onchange={changeHandler}
+                    class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input type="tel" label="Phone" name="Phone" onchange={changeHandler}
+                    class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input type="email" label="Email" name="Email" onchange={changeHandler}
+                    class="slds-m-bottom_x-small"></lightning-input>
+                <!-- FIXED: Updated button text to accurately reflect Contact creation -->
+                <lightning-button label="Create Contact" variant="brand" onclick={createContact}></lightning-button>
+            </form>
+        </div>
+    </lightning-card>
+</template>

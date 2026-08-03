@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-18-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <!-- <input type="text" onkeyup={handlerNameChange}/> 
+    <div>{name} {greeting} Heart break</div> -->
+    <lightning-card title="two way data binding">
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Enter your name" onkeyup={handlerNameChange}></lightning-input>
+            <div>{name} {greeting} Heart break</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="two way object binding">
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Enter city name" onkeyup={handlerobjectChange}></lightning-input>
+            <div>{address.city} is my city and {address.postalcode} is my postalcode {address.country} Heart</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="The getter Method">
+        <div class="slds-var-m-around_medium">
+            
+            <div>{userFirst}</div>
+            <div>the sum of {num1} and {num2} is {sum}</div>
+        </div>
+    </lightning-card>
+</template>

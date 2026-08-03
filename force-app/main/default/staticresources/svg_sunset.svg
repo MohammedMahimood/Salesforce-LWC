@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#17143d"/>
+      <stop offset="55%" stop-color="#8b3f78"/>
+      <stop offset="100%" stop-color="#f29a65"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#243b67"/>
+      <stop offset="100%" stop-color="#0b1730"/>
+    </linearGradient>
+    <radialGradient id="sunGlow">
+      <stop offset="0%" stop-color="#fff7c2" stop-opacity=".95"/>
+      <stop offset="45%" stop-color="#ffd36e" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#ffd36e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <circle cx="600" cy="235" r="125" fill="url(#sunGlow)" filter="url(#blur)"/>
+  <circle cx="600" cy="235" r="58" fill="#ffe9a3"/>
+  <path d="M0 320 Q120 280 240 325 T480 315 T800 320 V500 H0Z" fill="url(#water)"/>
+  <path d="M0 350 Q140 330 280 355 T560 345 T800 355" fill="none" stroke="#e9a27d" stroke-opacity=".45" stroke-width="4"/>
+  <path d="M0 390 Q130 370 260 395 T520 385 T800 395" fill="none" stroke="#8fa5c7" stroke-opacity=".35" stroke-width="3"/>
+  <path d="M0 440 Q150 415 300 445 T600 435 T800 445" fill="none" stroke="#6e83a9" stroke-opacity=".25" stroke-width="3"/>
+  <path d="M0 330 Q80 285 155 325 Q225 280 300 330 Q370 290 455 330 L455 500 H0Z" fill="#10152d"/>
+  <path d="M520 500 Q560 410 610 370 Q650 410 700 500Z" fill="#0d1429"/>
+  <path d="M620 410 Q650 360 680 410 Q710 350 745 410 Q770 370 800 420 V500 H620Z" fill="#0a1124"/>
+  <g fill="none" stroke="#19152f" stroke-width="5" stroke-linecap="round">
+    <path d="M150 170 q20 -18 40 0 q20 -18 40 0"/>
+    <path d="M245 205 q15 -14 30 0 q15 -14 30 0"/>
+    <path d="M470 125 q18 -16 36 0 q18 -16 36 0"/>
+  </g>
+  <text x="40" y="70" fill="#fff4d6" font-family="Georgia, serif" font-size="28" opacity=".9">Dream beyond the horizon</text>
+</svg>

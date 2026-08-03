@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-28-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Create a record using lightning-record-form">
+        <lightning-record-form object-api-name={objectName} fields={fieldList}
+            onsuccess={successHandler}></lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Display a record using lightning-record-form">
+        <lightning-record-form record-id="001Aq000017sXujIAE" object-api-name={objectName}
+            fields={fieldList}></lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Display a record in read only mode using lightning-record-form">
+        <lightning-record-form record-id="001Aq000017sXujIAE" object-api-name={objectName} fields={fieldList}
+            mode="readonly"></lightning-record-form>
+    </lightning-card>
+
+        <lightning-card title="Edit a record in read only mode using lightning-record-form">
+        <lightning-record-form record-id="001Aq000017sXujIAE" object-api-name={objectName} fields={fieldList}
+            mode="edit"  columns="2"></lightning-record-form>
+    </lightning-card>
+
+     <lightning-card title="Edit with Compact a record in read only mode using lightning-record-form">
+        <lightning-record-form record-id="001Aq000017sXujIAE" object-api-name={objectName} fields={fieldList}
+            mode="edit"  layout-type="Compact" columns="2"></lightning-record-form>
+    </lightning-card>
+
+</template>

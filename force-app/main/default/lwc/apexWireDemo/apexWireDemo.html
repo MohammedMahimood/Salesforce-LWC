@@ -1,0 +1,38 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-31-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Apex Wire LWC Property adapter">
+        <div class="slds-m-around_medium">
+            <template if:true={accounts.data}>
+                <template for:each={accounts.data} for:item="account">
+                    <div class="slds-box slds-box_xx-small slds-m-bottom_small" key={account.Id}>
+                        <p><strong>Name - </strong>{account.Name}</p>
+                        <p><strong>Type - </strong>{account.Type}</p>
+                        <p><strong>Industry - </strong>{account.Industry}</p>
+                    </div>
+
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Apex Wire Function adapter">
+        <div class="slds-m-around_medium">
+            <template if:true={accountList}>
+                <template for:each={accountList} for:item="account">
+                    <div class="slds-box slds-box_xx-small slds-m-bottom_small" key={account.Id}>
+                        <p><strong>Name - </strong>{account.Name}</p>
+                        <p><strong>Type - </strong>{account.newType}</p>
+                        <p><strong>Industry - </strong>{account.Industry}</p>
+                    </div>
+
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

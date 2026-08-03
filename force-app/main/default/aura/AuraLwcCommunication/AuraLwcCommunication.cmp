@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-22-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="message" type="String" />
+    <lightning:card title="Aura Component">
+        <div class="slds-m-around_medium">
+            <div>{!v.message}</div>
+        </div>
+        <div class="slds-p-around_medium">
+            <c:lwcAuraCommunication onsendMessage="{!c.handlerMessage}" title="The message is from Aura">
+            </c:lwcAuraCommunication>
+        </div>
+    </lightning:card>
+
+</aura:component>

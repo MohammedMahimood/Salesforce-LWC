@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#3ED42E</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>LWC Hero</label>
+    <navType>Standard</navType>
+    <tabs>LwcHero_LightPage</tabs>
+    <tabs>Reusable_Modal</tabs>
+    <tabs>Filtering_and_Sorting</tabs>
+    <tabs>Maps_In_LWC</tabs>
+    <tabs>Apex_Wire_LWC</tabs>
+    <tabs>CRUD_uiRecordApi</tabs>
+    <tabs>Base_Component</tabs>
+    <tabs>Wire_Adapter_Service</tabs>
+    <tabs>Navigation</tabs>
+    <tabs>Memory_Game</tabs>
+    <tabs>Static_Resources_Context_and_Toast</tabs>
+    <tabs>Lightning_Message_Service</tabs>
+    <tabs>Quiz_App</tabs>
+    <tabs>LifeCycleHooks_Page</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>LWC_Hero_UtilityBar</utilityBar>
+</CustomApplication>

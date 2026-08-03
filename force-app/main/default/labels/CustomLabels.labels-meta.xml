@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>discriptionOne</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>discriptionOne</shortDescription>
+        <value>Salesforce CLI is a powerful, free, open-source command-line tool designed to manage Salesforce environments, automate tasks, and streamline the application development lifecycle. It supports both developers and administrators, enabling faster deployments, efficient metadata handling, and integration with DevOps workflows.</value>
+    </labels>
+    <labels>
+        <fullName>discriptionTwo</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>discriptionTwo</shortDescription>
+        <value>Salesforce provides multi-currency support, allowing businesses to work with multiple currencies, such as USD, INR, EUR, etc. To input Indian Rupees (INR) in Salesforce like USD, follow these steps:</value>
+    </labels>
+</CustomLabels>

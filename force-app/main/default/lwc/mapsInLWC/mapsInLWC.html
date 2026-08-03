@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 07-31-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Account Interactive Map Layout" icon-name="standard:location">
+        <div class="slds-p-around_medium">
+            
+            <!-- Checks if the array elements collection contains records safely -->
+            <template if:true={mapMarkers.length}>
+                <lightning-map 
+                    map-markers={mapMarkers} 
+                    markers-title={markersTitle} 
+                    onmarkerselect={callMarkerHandler} 
+                    selected-marker-value={selectedMarker}
+                    zoom-level="4">
+                </lightning-map>
+            </template>
+
+            <!-- Inline empty configuration feedback display fallback template -->
+            <template if:false={mapMarkers.length}>
+                <div class="slds-align_absolute-center slds-text-color_weak slds-p-around_large">
+                    No Account Address Records Found.
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>
