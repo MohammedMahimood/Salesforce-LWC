@@ -1,0 +1,66 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-11-2026
+  @last modified by  : Mohammed Mahimood
+-->
+
+<template>
+    <lightning-card title="Calculate Price Handson L4">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Employee Name" name="employeeName" onchange={handlerOnChange}></lightning-input>
+            <lightning-input label="Basic Salary" name="basicSalary" onchange={handlerOnChange}></lightning-input>
+            <lightning-combobox name="performance" label="Performance" value={selectedValue}
+                placeholder="Select performance" options={options} onchange={handleComboboxChange}></lightning-combobox>
+            <lightning-button label="Calculate Bonus" onclick={handlerCalc}></lightning-button>
+
+            <template if:true={showDetails}>
+                <div class="slds-m-around_medium">
+                    <p><strong>Employee Name: </strong>{employeeName}</p>
+                    <p><strong>Basic Salary: </strong>{basicSalary}</p>
+                    <p><strong>Performance: </strong>{selectedValue}</p>
+                    <p><strong>Bonus Percentage: </strong>{percentValue}%</p>
+                    <p><strong>Bonus Amount: </strong>{calcValue}</p>
+                    <p><strong>Total Salary: </strong>{totalAmount}</p>
+                </div>
+            </template>
+            <template if:true={errorMessage}>
+                <p><strong>{errorMessage}</strong></p>
+            </template>
+            <template if:true={errorMessageEmpty}>
+                <p><strong>{errorMessageEmpty}</strong></p>
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>
+
+
+<!-- <template>
+    <lightning-card title="Calculate Price Handson L2">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Employee Name" name="employeeName" onchange={handlerOnChange}></lightning-input>
+            <lightning-input label="Basic Salary" name="basicSalary" onchange={handlerOnChange}></lightning-input>
+            <lightning-input label="Bonus" name="bonus" onchange={handlerOnChange}></lightning-input>
+            <lightning-button label="Calculate Salary" onclick={handlerCalc}></lightning-button>
+
+            <template if:true={showCost}>
+                <p><strong>Employee Name: </strong>{employeeName}</p>
+                <p><strong>Basic Salary: </strong>{basicSalary}</p>
+                <p><strong>Bonus: </strong>{bonus}</p>
+                <p><strong>Total Salary:</strong>{totalCost}</p>
+                <p><strong>Employee Salary Standard:</strong>{employeeStandard}</p>
+            </template>
+            <template if:true={errorMessageEmpty}>
+                <p><strong>{errorMessageEmpty}</strong></p>
+            </template>
+            <template if:true={errorMessage}>
+                <p><strong>{errorMessage}</strong></p>
+            </template>
+        </div>
+
+    </lightning-card>
+</template> -->

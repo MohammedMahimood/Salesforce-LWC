@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-13-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="LifeCycleHooks HandsOn L18">
+        <div class="slds-m-around_medium">
+
+            <lightning-button label={buttonLabel} onclick={handleClick}>
+            </lightning-button>
+            <template if:true={showDetails}>
+                <p>Name: {employee.name}</p>
+                <p>Department: {employee.department}</p>
+                <p>Salary: {employee.salary}</p>
+
+            </template>
+        </div>
+    </lightning-card>
+</template>

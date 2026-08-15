@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-14-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+
+    <lightning-card title="Handson Lightning Data Service(LDS)">
+        <div class="slds-m-around_medium">
+            <p><strong>Account Name :</strong>{name}</p>
+            <!-- <p><strong> Industry :</strong>{industry}</p>
+            <p><strong> Phone :</strong>{phone}</p> -->
+
+            <lightning-input name="contactFName" label="Enter Contact First Name" onchange={handlerInput}></lightning-input>
+            <lightning-input name="contactLName" label="Enter Contact Last Name" onchange={handlerInput}></lightning-input>
+            <lightning-input name="email" label="Enter Contact Email" onchange={handlerInput}></lightning-input>
+            <lightning-input name="phone" label="Enter Contact Phone" onchange={handlerInput}></lightning-input>
+            <lightning-button label="Create" onclick={handlerCreate}></lightning-button>
+
+        </div>
+    </lightning-card>
+
+</template>

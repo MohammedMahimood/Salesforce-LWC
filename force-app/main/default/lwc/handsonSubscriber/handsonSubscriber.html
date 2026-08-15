@@ -1,0 +1,83 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-15-2026
+  @last modified by  : Mohammed Mahimood
+-->
+
+
+<!--
+  @description       : LMS Subscriber
+  @author            : Mohammed Mahimood
+  @group             :
+  @last modified on  : 08-15-2026
+  @last modified by  : Mohammed Mahimood
+-->
+
+<template>
+
+    <lightning-card title="Handson SUBSCRIBER - Lightning Message Service">
+
+        <div class="slds-m-around_medium">
+
+            <!-- Clear Selection Button -->
+            <lightning-button label="Clear Selection" variant="destructive" onclick={handlerClearSelection}>
+            </lightning-button>
+
+            <div class="slds-m-top_medium">
+
+                <!-- Display received Accounts -->
+                <template for:each={receivedMessage} for:item="acc">
+
+                    <div key={acc.recordId} class="slds-m-bottom_small">
+
+                        <p>
+                            <strong>Account ID:</strong>
+                            {acc.recordId}
+                        </p>
+
+                        <p>
+                            <strong>Account Name:</strong>
+                            {acc.recordName}
+                        </p>
+
+                    </div>
+
+                </template>
+
+                <!-- Displayed when no Accounts are selected -->
+                <template if:false={receivedMessage.length}>
+
+                    <p>
+                        No Accounts selected.
+                    </p>
+
+                </template>
+
+            </div>
+
+        </div>
+
+    </lightning-card>
+
+</template>
+
+<!-- <template>
+    <lightning-card title="Handson SUBSCRIBER Lightning Message Service">
+        <div class="slds-m-around_medium">
+
+            <template for:each={receivedMessage} for:item="acc">
+                <div key={acc.recordId}>
+                    <lightning-button label={acc.recordName} data-record-id={acc.recordId} onclick={handlerNavi}></lightning-button>
+                    
+                </div>
+            </template>
+
+         
+           
+
+
+        </div>
+    </lightning-card>
+</template> -->

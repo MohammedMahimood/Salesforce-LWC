@@ -1,0 +1,442 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-11-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Enter Student Details">
+
+        <div class="slds-m-around_medium">
+            <lightning-input label="Student Name" name="studentName" onchange={handlerInput}></lightning-input>
+            <lightning-input label="Course" name="course" onchange={handlerInput}></lightning-input>
+            <lightning-input label="College" name="college" onchange={handlerInput}></lightning-input>
+            <lightning-button label="Show Student" onclick={handlerShow}></lightning-button>
+
+            <template if:true={showStudent}>
+                <div class="slds-p-around_medium">
+                    <p><strong>Student :</strong>{studentName}</p>
+                    <p><strong>Course :</strong>{course}</p>
+                    <p><strong>College :</strong>{college}</p>
+                </div>
+
+            </template>
+            <template if:false={errorMessage}>
+                <p><strong>{errorMessage}</strong></p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
+
+
+
+<!-- <template>
+
+    <lightning-card title="Enter Employee Details">
+
+        <div class="slds-m-around_medium">
+
+            <lightning-input label="Employee Name" name="employeeName" onchange={handlerInputChage}></lightning-input>
+
+            <lightning-input label="Employee Department" name="employeeDepartment" onchange={handlerInputChage}></lightning-input>
+
+            <lightning-input label="Employee Experience" name="employeeExperience" onchange={handlerInputChage}></lightning-input>
+
+            <lightning-button label="Show Details" onclick={handlerShowDetails}>
+
+            </lightning-button>
+
+            <template if:true={errorMessage}>
+
+                <p>{errorMessage}</p>
+
+            </template>
+
+            <template if:true={showDetails}>
+
+                <p>Welcome, {employeeName}</p>
+                <p>Department: {employeeDepartment}</p>
+                <p>Experience: {employeeExperience}</p>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template> -->
+
+<!-- <template>
+
+    <lightning-button
+        label="Click Me"
+        onclick={handleClick}>
+    </lightning-button>
+
+    <p>{message}</p>
+
+</template> -->
+
+<!-- <template>
+
+    <lightning-button
+        label="Open Modal"
+        onclick={openModal}>
+    </lightning-button>
+
+    <template lwc:if={isModalOpen}>
+
+        <section
+            role="dialog"
+            tabindex="-1"
+            aria-modal="true"
+            class="slds-modal slds-fade-in-open">
+
+            <div class="slds-modal__container">
+
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium">
+                        Employee Details
+                    </h2>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_medium">
+                    <p>Name: Mahimood</p>
+                    <p>Role: Salesforce Developer</p>
+                </div>
+
+                <footer class="slds-modal__footer">
+
+                    <lightning-button
+                        label="Close"
+                        onclick={closeModal}>
+                    </lightning-button>
+
+                </footer>
+
+            </div>
+
+        </section>
+
+        <div class="slds-backdrop slds-backdrop_open"></div>
+
+    </template>
+
+</template> -->
+<!-- <template>
+
+    <p>Name: {employee.name}</p>
+    <p>Role: {employee.role}</p>
+
+    <lightning-button
+        label="Change Name"
+        onclick={handleChange}>
+    </lightning-button>
+
+</template> -->
+<!-- <template>
+
+    <lightning-button
+        label="Open Custom Tab"
+        onclick={handleNavigate}>
+    </lightning-button>
+
+</template> -->
+<!-- <template>
+
+    <lightning-button
+        label="Create Contact"
+        onclick={handleNewContact}>
+    </lightning-button>
+
+</template> -->
+
+<!-- <template>
+
+    <lightning-button
+        label="Go to Account"
+        onclick={handleNavigate}>
+    </lightning-button>
+
+</template> -->
+<!-- <template>
+
+    <template lwc:if={account.data}>
+
+        <p>
+            Current Account Name: {accountName}
+        </p>
+
+        <lightning-input
+            label="New Account Name"
+            value={accountName}
+            onchange={handleNameChange}>
+        </lightning-input>
+
+        <lightning-button
+            label="Update Account"
+            onclick={handleUpdate}>
+        </lightning-button>
+
+    </template>
+
+</template> -->
+
+<!-- <template>
+
+    <template lwc:if={account.data}>
+
+        <p>
+           Account Name: {accountName}
+        </p>
+
+    </template>
+
+</template> -->
+
+<!-- <template>
+
+    <template for:each={accounts} for:item="account">
+
+        <p key={account.Id}>
+
+            {account.Name}
+
+            <lightning-button
+                label="Update"
+                data-id={account.Id}
+                onclick={handleUpdate}>
+            </lightning-button>
+
+        </p>
+
+    </template>
+
+</template> -->
+
+
+<!-- <template>
+
+   <template lwc:if={accounts.length}> 
+
+        <template for:each={accounts} for:item="account">
+
+            <p key={account}>
+                {account}
+            </p>
+
+        </template>
+
+   </template>
+
+</template> -->
+
+<!-- <template>
+
+    <lightning-input
+        label="Search Account"
+        value={searchKey}
+        onchange={handleSearch}>
+    </lightning-input>
+
+    <template lwc:if={accounts.data}>
+
+        <template for:each={accounts.data} for:item="account">
+
+            <p key={account.Id}>
+                {account.Name} - {account.Industry}
+            </p>
+
+        </template>
+
+    </template>
+
+    <template lwc:if={accounts.error}>
+
+        <p>Error loading accounts.</p>
+
+    </template>
+
+</template> -->
+
+<!-- <template>
+
+    <template lwc:if={accounts.data}>
+
+        <template for:each={accounts.data} for:item="account">
+
+            <p key={account.Id}>
+                {account.Name} - {account.Industry}
+            </p>
+
+        </template>
+
+    </template>
+
+    <template lwc:if={accounts.error}>
+
+        <p>Error loading accounts.</p>
+
+    </template>
+
+</template> -->
+
+<!-- <template>
+
+    <lightning-button
+        label="Call Child Method"
+        onclick={callChildMethod}>
+    </lightning-button>
+
+    <c-employee-child></c-employee-child>
+
+</template> -->
+
+<!-- <template>
+
+    <p>Parent Name: {employeeName}</p>
+
+    <c-employee-child
+        employee-name={employeeName}
+        onnamechange={handleNameChange}>
+    </c-employee-child>
+
+</template> -->
+
+
+<!--     <p>Parent Name: {employeeName}</p>
+
+    <c-employee-child
+        employee-name={employeeName}
+        onnamechange={handleNameChange}>
+    </c-employee-child>
+ -->
+<!-- <template>
+
+    <p>Name: {employee.name}</p>
+    <p>Department: {employee.department}</p>
+
+    <lightning-button
+        label="Change Name"
+        onclick={changeName}>
+    </lightning-button>
+
+</template> -->
+
+<!-- <template>
+
+    <p>Employee Name: {employeeName}</p>
+
+    <lightning-button
+        label="Change Name"
+        onclick={changeName}>
+    </lightning-button>
+
+</template> -->
+
+<!-- <template>
+   <template for:each={employeeNames} for:item="employee">
+    <div key={employee.id}>
+        <p>{employee.name}</p>
+        <p>{employee.department}</p>
+    </div>
+   </template>
+</template> -->
+
+<!-- <template>
+
+    <lightning-card title="Account Information">
+
+        <c-employee-child
+            onaccountselect={handleAccountSelect}>
+        </c-employee-child>
+
+
+        <template if:true={account}>
+
+            <p>Name: {account.Name}</p>
+            <p>Industry: {account.Industry}</p>
+            <p>Phone: {account.Phone}</p>
+
+        </template>
+
+    </lightning-card>
+
+</template> -->
+
+<!-- <template>
+
+    <lightning-card title="Employee Information">
+
+        <p>{employeeName}</p>
+        <p>{department}</p>
+
+        <c-employee-child
+            onemployeechange={handleEmployeeChange}>
+        </c-employee-child>
+
+    </lightning-card>
+
+</template> -->
+
+<!-- <template>
+
+    <lightning-combobox
+        label="Department"
+        value={selectedDepartment}
+        options={departmentOptions}
+        onchange={handleChange}>
+    </lightning-combobox>
+
+</template> -->
+<!-- <template>
+
+    <div onclick={handleParent}>
+
+        <lightning-button
+            label="Save"
+            onclick={handleButton}>
+        </lightning-button>
+
+    </div>
+
+</template> -->
+<!-- <template>
+    <lightning-card title="Event Practice">
+
+        <lightning-input
+            label="Company Name"
+            onchange={handleChange}>
+        </lightning-input>
+
+    </lightning-card>
+</template> -->
+
+<!-- <template>
+    <lightning-card title="Employee Information">
+        <div>
+            <p>{employeeName}</p>
+            <p>{department}</p>
+            <p>{experience} Years</p>
+            <p>{location}</p>
+
+        </div>
+    </lightning-card>
+</template> -->
+
+
+<!--<template>
+ 
+    <div class="card">
+        Employee 1 hekllooo
+    </div>
+
+    <div class="card">
+        Employee 2 dskjdsllksj
+    </div>
+    <div class="card">
+        Employee 3jdllkdljflsjlfs
+    </div>
+
+</template> -->

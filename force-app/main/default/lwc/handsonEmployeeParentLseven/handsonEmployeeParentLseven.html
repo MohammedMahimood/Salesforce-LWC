@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-12-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+
+
+    <lightning-card title="Parent-c employee Handson L7">
+
+        <div class="slds-m-around_medium">
+            <c-employee-child name={name} department={department} salary={salary} onsalarydecrease={handlerDecSal}
+                onsalaryupdated={handlerUpdate}>
+
+            </c-employee-child>
+            <template for:each={salHistory} for:item="sal">
+                <p key={sal}>Salary History: {sal}</p>
+            </template>
+
+            <!-- <lightning-button label="Salary Updation" onclick={handlerSalary}></lightning-button> -->
+            <!-- <template if:true={newSalary}>
+                <p><strong>Employee Name: </strong>{name}</p>
+                <p><strong>Department: </strong>{department}</p>
+                <p><strong>Salary: </strong>{newSalary}</p>
+            </template> -->
+        </div>
+
+    </lightning-card>
+
+
+</template>

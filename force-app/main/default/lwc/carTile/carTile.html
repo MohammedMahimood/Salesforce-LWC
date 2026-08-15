@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-04-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <div onclick={handleClick}>
+        <div class="card-container">
+            <img src={car.Picture_URL__c} class="slds-align_absolute-center car-image" alt="Car Picture"/>
+            <div>
+                
+                <p class="title slds-align_absolute-center">{car.Name}</p>
+                <p class="title slds-align_absolute-center">
+                    <strong>MSRP:</strong>
+                    <lightning-formatted-number  format-style="currency" currency-code="USD" value={car.MSRP__c} class="price" maximum-fraction-digits="0"></lightning-formatted-number>
+                </p>
+            </div>
+        </div>
+    </div>
+</template>

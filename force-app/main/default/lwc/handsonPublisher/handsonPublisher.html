@@ -1,0 +1,50 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-15-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<!--
+  @description       : LMS Publisher
+  @author            : Mohammed Mahimood
+  @group             :
+  @last modified on  : 08-15-2026
+  @last modified by  : Mohammed Mahimood
+-->
+
+<template>
+
+    <lightning-card title="Handson PUBLISHER - Lightning Message Service">
+
+        <div class="slds-m-around_medium">
+
+            <!-- Display Account datatable -->
+            <lightning-datatable key-field="Id" data={accounts} columns={columns} selected-rows={selectedRows}
+                onrowselection={handlerRowSelection}>
+            </lightning-datatable>
+
+        </div>
+
+    </lightning-card>
+
+</template>
+
+<!-- <template>
+    <lightning-card title="Handson PUBLISHER Lightning Message Service">
+        <div class="slds-m-around_medium"> 
+            <template if:true={accounts}>
+                
+                <lightning-datatable key-field="Id" data={accounts} columns={columns} onrowselection={handlerRowSelection}></lightning-datatable>
+                 <template for:each={accounts} for:item="account">
+                    <div key={account.Id}>
+                        <p><strong> Account Record Id:</strong>{account.Id}</p>
+                        <p><strong>Account Name:</strong>{account.Name}</p>
+                    </div>
+                </template>
+            </template>
+             <lightning-input label="Enter message to Send" onchange={handlerInput}></lightning-input>
+            <lightning-button label="Send" onclick={handlerSend}></lightning-button> 
+        </div>
+    </lightning-card>
+</template> -->

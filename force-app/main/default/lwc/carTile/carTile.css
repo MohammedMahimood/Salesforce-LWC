@@ -1,0 +1,24 @@
+.card-container {
+    border: 1px solid #dddbda;
+    border-radius: .25rem;
+    background: #fff;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+}
+
+.car-image {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+}
+
+.title {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

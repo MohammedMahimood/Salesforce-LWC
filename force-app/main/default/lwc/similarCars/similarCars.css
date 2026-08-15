@@ -1,0 +1,12 @@
+img.car{
+height: 120px;
+max-width: initial;
+}
+.carName{
+    font-weight: bolder;
+    font-size: medium;
+}
+.maketypes{
+    font-weight: bold;
+    font-size: medium;
+}

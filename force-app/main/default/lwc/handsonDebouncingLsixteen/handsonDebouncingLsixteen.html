@@ -1,0 +1,38 @@
+<!--
+  @description       : 
+  @author            : Mohammed Mahimood
+  @group             : 
+  @last modified on  : 08-13-2026
+  @last modified by  : Mohammed Mahimood
+-->
+<template>
+    <lightning-card title="Debouncing Handson L16">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Search With Account Name" type="search" onchange={handlerChange}></lightning-input>
+            <template if:true={isLoading}>
+                <p>Loading....</p>
+            </template>
+            <template if:true={empty}>
+                <p>{empty}</p>
+            </template>
+            <template if:true={war}>
+                <p>{war}</p>
+            </template>
+                <template if:false={dontRunApex}> 
+                <template for:each={accounts} for:item="acc">
+                    <div key={acc.Id}>
+                        <p><strong>Account Name :</strong>{acc.Name}</p>
+                        <p><strong>Account Industry :</strong>{acc.Industry}</p>
+
+
+                    </div>
+
+                </template>
+            </template> 
+            <lightning-button
+    label="Refresh Accounts"
+    onclick={handlerRefresh}>
+</lightning-button>
+        </div>
+    </lightning-card>
+</template>
